@@ -1,0 +1,175 @@
+{
+    // Font Settings
+    "editor.fontLigatures": null,
+    "editor.fontFamily": "Source Code Pro", 
+    "editor.fontSize": 13,
+    "editor.fontWeight": 500,
+    // Cursor Animation
+    "editor.cursorSmoothCaretAnimation": true,
+    // Other
+    "editor.codeActionsOnSave": null,
+    // Universal Colour Settings
+    "editor.tokenColorCustomizations": {
+        "comments": "#9f9f9f",
+        "functions": "#ffbe69",
+        "numbers": "#ff8b8b",
+        "strings": "#96cd83",
+
+        // Individual Settings
+        "textMateRules": [
+            {
+                // Conditionals, Loops // JavaScript, Python
+                "scope": [
+                    "keyword.control.conditional.js",
+                    "keyword.control.loop.js",
+                    "keyword.control.flow.python"
+                ],
+                "settings": {
+                    "foreground": "#ffa6d0",
+                }
+            },
+            {
+                // Control Flow // JavaScript
+                "scope": [
+                    "keyword.control.flow.js",
+                    // "entity.name.namespace"
+                ],
+                "settings": {
+                    "foreground": "#ffa6d0",
+                    "fontStyle": "bold italic"
+                }
+            },
+            {
+                // Brackets, Operators // JavaScript, Python
+                "scope": [
+                    "meta.brace.round.js",
+                    "meta.brace.square.js",
+                    "punctuation.definition.parameters.end.js",
+                    "punctuation.definition.parameters.begin.js",
+                    "punctuation.definition.block.js",
+                    "keyword.operator.relational.js",
+                    "keyword.operator.comparison.js",
+                    "keyword.operator.assignment.js",
+                    "keyword.operator.increment.js",
+                    "keyword.operator.decrement.js",
+                    "keyword.operator.logical.js",
+                    "keyword.operator.arithmetic.js",
+
+                    "punctuation.definition.arguments.begin.python",
+                    "punctuation.definition.arguments.end.python",
+                    "punctuation.definition.parameters.begin.python",
+                    "punctuation.definition.parameters.end.python",
+                    "punctuation.definition.dict.begin.python",
+                    "punctuation.definition.dict.end.python",
+                    "punctuation.definition.arguments.begin.python",
+                    "punctuation.definition.arguments.end.python",
+                    "punctuation.definition.list.begin.python",
+                    "punctuation.definition.list.end.python",
+                    "keyword.operator.assignment.python",
+                    "keyword.operator.arithmetic.python",
+                    "keyword.operator.comparison.python"
+                ],
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Constants // JavaScript
+                "scope": [
+                    "variable.other.constant.object.js",
+                ],
+                "settings": {
+                    "foreground": "#9caefe"
+                }
+            },
+            {
+                // This // JavaScript
+                "scope": [
+                    "variable.language.this.js"
+                ],
+                "settings": {
+                    "foreground": "#9caefe",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                // Generic Functions & Classes // Python, JavaScript
+                "scope": [
+                    "meta.function-call.generic.python",
+                    "entity.name.type.class"
+                    
+                ],
+                "settings": {
+                    "foreground": "#ffbe69",
+                }
+            },
+            {
+                // Import Keyword // Python
+                "scope": [
+                    "keyword.control.import.python",
+                    
+                ],
+                "settings": {
+                    "foreground": "#ff8b8b",
+                }
+            },
+            {
+                // Attributes // Python
+                "scope": [
+                    "meta.attribute.python",
+                    "meta.indexed-name.python",
+                ],
+                "settings": {
+                    "foreground": "#9CDCFE"
+                }
+            },
+            {
+                // Modules // Python
+                "scope": [
+                    "entity.name.namespace"
+                ],
+                "settings": {
+                    "foreground": "#9CDCFE",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Logical Operators // Python
+                "scope": [
+                    "keyword.operator.logical.python"
+                ],
+                "settings": {
+                    "foreground": "#D4D4D4",
+                    "fontStyle": "bold"
+                }
+            },
+        ]
+    },
+    
+    // Workbenk Colours
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#ffe186",
+        "editorBracketHighlight.foreground2": "#c686ff",
+        "editorBracketHighlight.foreground3": "#ff86db",
+        "notebook.cellEditorBackground": "#1c1c1c",
+        "editor.background": "#1c1c1c",
+        "editor.foldBackground": "#292929"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "python.defaultInterpreterPath": "/Users/thepeski/opt/anaconda3/bin/python",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "block-outline"
+}
+
+        // "numbers": "#ff9a9a",
+        // "strings": "#a2cd94",
+        // "functions": "#3995d1",
+        // "keywords": "#ffbe69"
+        // "keywords": "#569cd6",
+        // "numbers": "#ff8b8b",
+        // "strings": "#96cd83",

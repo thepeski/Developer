@@ -1,0 +1,7 @@
+
+// Toggle Hidden Finder Folders / Files
+defaults write com.apple.Finder AppleShowAllFiles true
+killall Finder
+
+defaults write com.apple.Finder AppleShowAllFiles false
+killall Finder
