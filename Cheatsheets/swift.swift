@@ -23,11 +23,15 @@ print(optionalVariable!)                                    // ! unwraps an opti
 
 // Structures
 struct SomeStructure {                                      // declaring a structure
-    var someStructureProperty = 1
+    var someStructureProperty = ["key": "value"]
     var property: String
 
     func someStructureMethod() {
         // do something
+    }
+
+    mutating func mutatingMethod() {                        // mutating method
+        someStructureProperty["key2"] = "value2"
     }
 
     init(property: String) {                                // initialiser function
