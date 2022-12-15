@@ -80,7 +80,11 @@ while condition {
 }
 
 // Functions
-func someFunction(argument: Int) {
+func someFunction(argument: Int) {                          // function declaration
+    // do something
+}
+
+func someOtherFunction(argument: Int) -> String {           // function with a return statement
     // do something
     return "result"
 }
