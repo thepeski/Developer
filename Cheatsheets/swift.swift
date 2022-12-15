@@ -21,6 +21,23 @@ var optionalVariable: String? = nil                         // initialise variab
 optionalVariable = "optional text"                          // variable assignment
 print(optionalVariable!)                                    // ! unwraps an optional variable
 
+// Structures
+struct SomeStructure {                                      // declaring a structure
+    var someStructureProperty = 1
+    var property: String
+
+    func someStructureMethod() {
+        // do something
+    }
+
+    init(property: String) {                                // initialiser function
+        self.property = property
+    }
+}
+var structureInstance = SomeStructure(property = "!")       // initialising a structure
+
+structure.property.append(item)                             // adding structure elements
+
 // Logic & Control Flow
 "!, &&, ||"                                                 // logical operators
 "<, <=, >, >=, =="                                          // comparison operators
