@@ -21,6 +21,15 @@ var optionalVariable: String? = nil                         // initialise variab
 optionalVariable = "optional text"                          // variable assignment
 print(optionalVariable!)                                    // ! unwraps an optional variable
 
+if let safeOptional = someOptional {                        // optional binding
+    // work on safeOptional
+} else {
+    // someOptional is nil
+}
+
+someOptional ?? defaultValue                                // nil coalescing operator
+optional?.property                                          // optional chaining, if optional not nil, access property
+
 // Structures
 struct SomeStructure {                                      // declaring a structure
     var someStructureProperty = ["key": "value"]
@@ -38,9 +47,32 @@ struct SomeStructure {                                      // declaring a struc
         self.property = property
     }
 }
-var structureInstance = SomeStructure(property = "!")       // initialising a structure
+var structureInstance = SomeStructure(property = "!")       // initialising a structure, variable points to the value
 
 structure.property.append(item)                             // adding structure elements
+
+// Classes
+class SomeClass {
+    var someString: String                                  // requires an init function
+
+    init(someString: String) {
+        self.someString = someString
+    }
+}                                          
+var classInstance = SomeClass(someString = "text")          // creating a class instance, variable points to the reference
+
+class ChildClass: ParentClass {                             // interitance
+    override func do() {                                    // overriding parent methods
+        super.do()                                          // performs original method code
+        // do something additional
+    }
+
+    var someClassVariable = 0
+
+    func changeVariable() {                                 // does not require mutating keyword
+        someClassVariable -= 1
+    }
+}
 
 // Logic & Control Flow
 "!, &&, ||"                                                 // logical operators
