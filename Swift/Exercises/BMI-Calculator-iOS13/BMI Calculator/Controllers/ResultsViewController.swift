@@ -1,11 +1,3 @@
-//
-//  ResultsViewController.swift
-//  BMI Calculator
-//
-//  Created by Jan Pęski on 16/12/2022.
-//  Copyright © 2022 Angela Yu. All rights reserved.
-//
-
 import UIKit
 
 class ResultsViewController: UIViewController {
