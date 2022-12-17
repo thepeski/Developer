@@ -74,6 +74,11 @@ class ChildClass: ParentClass {                             // interitance
     }
 }
 
+// Protocols
+protocol SomeProtocol {                                     // declaring a protocol
+
+}
+
 // Logic & Control Flow
 "!, &&, ||"                                                 // logical operators
 "<, <=, >, >=, =="                                          // comparison operators
