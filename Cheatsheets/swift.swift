@@ -76,7 +76,19 @@ class ChildClass: ParentClass {                             // interitance
 
 // Protocols
 protocol SomeProtocol {                                     // declaring a protocol
+    func someFunc()                                         // defining required component
+}
 
+struct SomeStructure: SomeProtocol {                        // structure uses a protocol
+    func someFunc() {
+        // do something
+    }
+}
+
+class SomeClass: ParentClass, SomeProtocol {                             // class uses a protocol
+    func someFunc() {
+        // do something similar
+    }
 }
 
 // Logic & Control Flow
