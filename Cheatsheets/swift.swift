@@ -142,6 +142,20 @@ func someOtherFunction(argument: Int) -> String {           // function with a r
     return "result"
 }
 
+// Closures
+func someOperation(a: Int, b: Int,                          
+     operation: (Int, Int) -> Int) {
+    return operation(a, b)
+}
+                                                            
+let result = someOperation(                                 // closure notation
+        a: 1, b: 2, operation: {(n1: Int, n2: Int) -> Int in return n1 * n2}
+    )
+let result2 = someOperation(                                // shorthand notation
+        (a: 1, b: 2, operation: {$0 * $1})
+    )
+let result3 = someOperation((a: 1, b: 2) {$0 * $1}          // can omit last parameter name if it's a closure
+
 /* Miscellaneous
 Naming convention: camelCase
 */
