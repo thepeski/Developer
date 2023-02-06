@@ -147,7 +147,7 @@ func someOperation(a: Int, b: Int,
      operation: (Int, Int) -> Int) {
     return operation(a, b)
 }
-                                                            
+                                  
 let result = someOperation(                                 // closure notation
         a: 1, b: 2, operation: {(n1: Int, n2: Int) -> Int in return n1 * n2}
     )
