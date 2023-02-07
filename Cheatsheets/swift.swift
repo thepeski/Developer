@@ -30,67 +30,6 @@ if let safeOptional = someOptional {                        // optional binding
 someOptional ?? defaultValue                                // nil coalescing operator
 optional?.property                                          // optional chaining, if optional not nil, access property
 
-// Structures
-struct SomeStructure {                                      // declaring a structure
-    var someStructureProperty = ["key": "value"]
-    var property: String
-
-    func someStructureMethod() {
-        // do something
-    }
-
-    mutating func mutatingMethod() {                        // mutating method
-        someStructureProperty["key2"] = "value2"
-    }
-
-    init(property: String) {                                // initialiser function
-        self.property = property
-    }
-}
-var structureInstance = SomeStructure(property = "!")       // initialising a structure, variable points to the value
-
-structure.property.append(item)                             // adding structure elements
-
-// Classes
-class SomeClass {
-    var someString: String                                  // requires an init function
-
-    init(someString: String) {
-        self.someString = someString
-    }
-}                                          
-var classInstance = SomeClass(someString = "text")          // creating a class instance, variable points to the reference
-
-class ChildClass: ParentClass {                             // interitance
-    override func do() {                                    // overriding parent methods
-        super.do()                                          // performs original method code
-        // do something additional
-    }
-
-    var someClassVariable = 0
-
-    func changeVariable() {                                 // does not require mutating keyword
-        someClassVariable -= 1
-    }
-}
-
-// Protocols
-protocol SomeProtocol {                                     // declaring a protocol
-    func someFunc()                                         // defining required component
-}
-
-struct SomeStructure: SomeProtocol {                        // structure uses a protocol
-    func someFunc() {
-        // do something
-    }
-}
-
-class SomeClass: ParentClass, SomeProtocol {                             // class uses a protocol
-    func someFunc() {
-        // do something similar
-    }
-}
-
 // Logic & Control Flow
 "!, &&, ||"                                                 // logical operators
 "<, <=, >, >=, =="                                          // comparison operators
@@ -157,6 +96,67 @@ let result2 = someOperation(                                // shorthand notatio
     )
 
 let result3 = someOperation(a: 1, b: 2) {$0 * $1}           // can omit last parameter name if it's a closure
+
+// Structures
+struct SomeStructure {                                      // declaring a structure
+    var someStructureProperty = ["key": "value"]
+    var property: String
+
+    func someStructureMethod() {
+        // do something
+    }
+
+    mutating func mutatingMethod() {                        // mutating method
+        someStructureProperty["key2"] = "value2"
+    }
+
+    init(property: String) {                                // initialiser function
+        self.property = property
+    }
+}
+var structureInstance = SomeStructure(property = "!")       // initialising a structure, variable points to the value
+
+structure.property.append(item)                             // adding structure elements
+
+// Classes
+class SomeClass {
+    var someString: String                                  // requires an init function
+
+    init(someString: String) {
+        self.someString = someString
+    }
+}                                          
+var classInstance = SomeClass(someString = "text")          // creating a class instance, variable points to the reference
+
+class ChildClass: ParentClass {                             // interitance
+    override func do() {                                    // overriding parent methods
+        super.do()                                          // performs original method code
+        // do something additional
+    }
+
+    var someClassVariable = 0
+
+    func changeVariable() {                                 // does not require mutating keyword
+        someClassVariable -= 1
+    }
+}
+
+// Protocols
+protocol SomeProtocol {                                     // declaring a protocol
+    func someFunc()                                         // defining required component
+}
+
+struct SomeStructure: SomeProtocol {                        // structure uses a protocol
+    func someFunc() {
+        // do something
+    }
+}
+
+class SomeClass: ParentClass, SomeProtocol {                             // class uses a protocol
+    func someFunc() {
+        // do something similar
+    }
+}
 
 // Array Methods
 array.map()                                                 // transforms array elements according to passed function
