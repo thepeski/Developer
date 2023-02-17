@@ -32,33 +32,46 @@ str([1, 2, 3])
 "+=, -+, *=, /=, ++, --"                                    # unary operators
 "<, <=, >, >=, ==, !=, is"                                  # comparison operators
 
-if condition:
+if True:                                                    # if statement
     # do X
-elif condition2:
+    print(0)
+elif True:                                                  # elif
     # do Y
-else:
+    print(0)
+else:                                                       # else
     # do Z
+    print(0)
 
-match variable:                                             # Python's equivalent of a switch statement, requires Python 3.10 or newer
+match x:                                                    # Python's equivalent of a switch statement, requires Python 3.10 or newer
     case "option 1":
         # do something
+        print(0)
     case "option 2":
         # do something else
+        print(0)
     case _:
         # default action
+        print(0)
 
 # Loops
-for item in iterable_object:
+for item in [1, 2, 3]:                                      # for loop
 	# do something
+    print(0)
 
-while condition:
+while True:                                                 # while loop
 	# do something while condition is true
     break
 
+# String Manipulation
+str.lower()                                                 # converts string to lowercase
+str.upper()                                                 # converts string to uppercase
+
+some_text[0:9:1]                                            # slicing strings [start:end:step]
+
 # List Manipulation
 list.append()                                               # appends value at the end of a list
-list.extend(...values)                                      # append all passed values to the end of a list
-list.insert(index, value)                                   # inserts an item at the given position
+list.extend(...[1, 2, 3])                                   # append all passed values to the end of a list
+list.insert(0, 1)                                           # inserts an item at the given position (index, value)
 list.pop()                                                  # removes an item at the given position or from the end if nothing passed
 list.remove()                                               # removes the first matching value, ValueError if value not found
 list.index()                                                # returns the first index of a given item
@@ -68,8 +81,10 @@ list.sort()                                                 # sorts items in pla
 list.join("&")                                              # converts list into a string using the separator or a coma if nothing passed
 list.clear()                                                # removes all items from a list
 
-some_list[start:end:step]                                   # slicing lists
+some_list[0:9:1]                                            # slicing lists [stat:end:step]
 some_list[1], some_list[0] = some_list[1], some_list[0]     # swapping values
+
+[x * 2 for x in some_list if x >= 2]                        # list comprehension [modify each element x for x in some_list] 
 
 # String Manipulation
 x = 1

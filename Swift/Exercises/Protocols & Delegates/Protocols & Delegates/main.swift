@@ -1,9 +1,9 @@
 protocol AdvancedLifeSupport {
-    func performCPR()
+    func performCPR() // every complying object must implement this function
 }
 
-class EmergencyCallHandler {
-    var delegate: AdvancedLifeSupport?
+class EmergencyCallHandler { // this class can trigger another object to execute a function
+    var delegate: AdvancedLifeSupport? // defining the object to execute the function
     
     func assessSituation() {
         print("Can you tell me what happened?")
@@ -14,35 +14,34 @@ class EmergencyCallHandler {
     }
 }
 
-struct Paramedic: AdvancedLifeSupport {
+struct Paramedic: AdvancedLifeSupport { // complies with AdvancedLifeSupport protocol
     
     init(handler: EmergencyCallHandler) {
-        handler.delegate = self
-        
+        handler.delegate = self // allows EmergencyCallHandler to delegate AdvancedLifeSupport to itself (Paramedic)
     }
     
-    func performCPR() {
+    func performCPR() { // Paramedic implements the function in its own way
         print("The paramedic performs chest compression for 30 seconds.")
     }
 }
 
-class Doctor: AdvancedLifeSupport {
+class Doctor: AdvancedLifeSupport { // another object complying with AdvancedLifeSupport protocol
     
     init(handler: EmergencyCallHandler) {
         handler.delegate = self
     }
     
-    func performCPR() {
+    func performCPR() { // Doctor implements the function in its own way
         print("The doctor does chest compression for 30 seconds.")
     }
     
-    func useStethescope() {
+    func useStethescope() { // can have additional functionalities
         print("Listening for heart sounds")
     }
 }
 
-class Surgeon: Doctor {
-    override func performCPR() {
+class Surgeon: Doctor { // Surgeon inherits from Doctor so complies with AdvancedLifeSupport protocol
+    override func performCPR() { // extending Doctor's function
         super.performCPR()
         print("Sings Staying Alive by the Bee Gees")
     }
