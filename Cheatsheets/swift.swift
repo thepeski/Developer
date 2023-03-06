@@ -163,6 +163,9 @@ array.map()                                                 // transforms array 
 array.map({$0 + 1})                                         // increases each array element by 1
 array.map({"\($0)"})                                        // transforms each array element into a string
 
+// String Methods
+string.append("x")                                          // appends at the end of a string
+
 /* Miscellaneous
 Naming convention: camelCase
 */
