@@ -38,6 +38,7 @@ struct WeatherManager {
                     self.delegate?.didFailWithError(error: error!)
                     return
                 }
+            
                 
                 if let safeData = data { // no error, decode JSON
                     if let weather = self.parseJSON(safeData) {
