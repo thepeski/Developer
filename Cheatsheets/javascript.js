@@ -95,4 +95,4 @@ Object["property"]                                          // alternative way o
 
 /* Miscellaneous
 Naming Convention: camelCase
-*/ 
+*/
